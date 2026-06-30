@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <span class="site-brand">Ecommerce</span>
+      <nav class="site-nav">
+        <a href="/">Inicio</a>
+        <a href="/realtimeproducts">Tiempo real</a>
+      </nav>
+    </header>
+    <main class="site-main">
+      {{{body}}}
+    </main>
+    {{#if realtime}}
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="/js/realTimeProducts.js"></script>
+    {{/if}}
+  </body>
+</html>

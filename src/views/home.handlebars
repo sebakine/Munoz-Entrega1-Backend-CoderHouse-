@@ -1,0 +1,23 @@
+<section class="page-head">
+  <h1 class="page-title">Listado de productos</h1>
+  <p class="page-subtitle">Vista general persistida en el servidor.</p>
+</section>
+
+{{#if products.length}}
+  <ul class="product-grid">
+    {{#each products}}
+      <li class="product-card">
+        <h2 class="product-card__title">{{this.title}}</h2>
+        <span class="product-card__category">{{this.category}}</span>
+        <p class="product-card__description">{{this.description}}</p>
+        <div class="product-card__meta">
+          <span class="product-card__price">${{this.price}}</span>
+          <span class="product-card__stock">Stock: {{this.stock}}</span>
+        </div>
+        <span class="product-card__code">{{this.code}}</span>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p class="empty-state">No hay productos cargados.</p>
+{{/if}}

@@ -1,0 +1,32 @@
+<section class="page-head">
+  <h1 class="page-title">Productos en tiempo real</h1>
+  <p class="page-subtitle">Los cambios se reflejan al instante en todos los clientes conectados.</p>
+</section>
+
+<div class="realtime">
+  <section class="panel">
+    <h2 class="panel__title">Crear producto</h2>
+    <form id="create-form" class="form" autocomplete="off">
+      <input class="field" name="title" type="text" placeholder="Título" required />
+      <input class="field" name="description" type="text" placeholder="Descripción" required />
+      <input class="field" name="code" type="text" placeholder="Código único" required />
+      <input class="field" name="price" type="number" min="0" step="0.01" placeholder="Precio" required />
+      <input class="field" name="stock" type="number" min="0" step="1" placeholder="Stock" required />
+      <input class="field" name="category" type="text" placeholder="Categoría" required />
+      <button class="btn btn--primary" type="submit">Agregar</button>
+    </form>
+
+    <h2 class="panel__title">Eliminar producto</h2>
+    <form id="delete-form" class="form form--inline" autocomplete="off">
+      <input class="field" name="id" type="number" min="1" step="1" placeholder="ID a eliminar" required />
+      <button class="btn btn--danger" type="submit">Eliminar</button>
+    </form>
+
+    <p id="feedback" class="feedback" role="status" aria-live="polite"></p>
+  </section>
+
+  <section class="panel">
+    <h2 class="panel__title">Productos conectados</h2>
+    <ul id="products-list" class="product-list"></ul>
+  </section>
+</div>

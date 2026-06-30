@@ -6,7 +6,7 @@ export const notFoundHandler = (req, res) => {
   sendError(res, 404, `Ruta no encontrada: ${req.method} ${req.originalUrl}`);
 };
 
-// Global Error Boundary: unico punto de salida para cualquier excepcion.
+// Barrera global de errores: unico punto de salida para cualquier excepcion.
 // Distingue errores operacionales (controlados) de fallos inesperados.
 // eslint-disable-next-line no-unused-vars
 export const globalErrorHandler = (err, req, res, next) => {
@@ -14,7 +14,7 @@ export const globalErrorHandler = (err, req, res, next) => {
     return sendError(res, err.statusCode, err.message, err.details ?? null);
   }
 
-  // Body JSON malformado emitido por express.json().
+  // Cuerpo JSON malformado emitido por express.json().
   if (err?.type === 'entity.parse.failed' || err instanceof SyntaxError) {
     return sendError(res, 400, 'El cuerpo de la peticion no es un JSON valido');
   }

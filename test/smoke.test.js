@@ -1,4 +1,4 @@
-// Smoke test automatizado: levanta el servidor real en un puerto efimero,
+// Prueba de humo automatizada: levanta el servidor real en un puerto efimero,
 // ejecuta peticiones a todos los endpoints con el cliente fetch nativo y
 // verifica los contratos de respuesta. Sale con codigo 1 ante cualquier fallo.
 

@@ -2,8 +2,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { AppError } from './errors.js';
 
-// Acceso a disco con proteccion contra Path Traversal: el archivo resuelto
-// siempre debe permanecer dentro del directorio de datos autorizado.
+// Acceso a disco con proteccion contra recorrido de rutas (path traversal):
+// el archivo resuelto siempre permanece dentro del directorio autorizado.
 export class FileStorage {
   #filePath;
 

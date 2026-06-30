@@ -1,7 +1,7 @@
 {
   "name": "ecommerce-backend",
-  "version": "1.0.0",
-  "description": "Servidor backend para gestion de productos y carritos de compra (Entrega N 1)",
+  "version": "2.0.0",
+  "description": "Servidor backend para gestion de productos y carritos de compra con vistas en tiempo real (Entrega N 2)",
   "type": "module",
   "main": "src/server.js",
   "scripts": {
@@ -14,7 +14,11 @@
     "express",
     "api",
     "productos",
-    "carritos"
+    "carritos",
+    "handlebars",
+    "socket.io",
+    "websockets",
+    "tiempo-real"
   ],
   "author": "Sebastian",
   "license": "ISC",
@@ -22,7 +26,9 @@
     "node": ">=18"
   },
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "express-handlebars": "^9.0.1",
+    "socket.io": "^4.8.3"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
